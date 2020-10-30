@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>BBS</title>
+	<script language=javascript src="$$/$$.js"></script>
+	<script language=javascript src="$$/$$APP.js"></script>
+	<script language=javascript src="$$/$$Tree.js"></script>
+	<script language=javascript src="$$/$$ColorBox.js"></script>
+	<script language=javascript src="$$/$$Editor.js"></script>
+	<script language=javascript src="$$/$$PopSelector.js"></script>
+	<script language=javascript src="$$/$$PickDateTime.js"></script>
+	<script language=javascript src="APP_Tree.js"></script>
+	<script language=javascript src="APP_List.js"></script>
+	<script language=javascript src="global.js"></script>
+	<script language=javascript src="index.js"></script>
+	<LINK REL="stylesheet" TYPE="text/css" HREF="$$/sty_paperFlat.css">
+	<LINK REL="stylesheet" TYPE="text/css" HREF="$$/Tree.css">
+	<LINK REL="stylesheet" TYPE="text/css" HREF="$$/$$ColorBox.css">
+	<LINK REL="stylesheet" TYPE="text/css" HREF="$$/$$Editor.css">
+	<LINK REL="stylesheet" TYPE="text/css" HREF="index.css">
+	<style>
+		#guide>div>*{vertical-align:middle}
+		#guide>.head>a.op{margin:.3rem 0 0 .2rem;font-size:1rem}
+	</style>
+</head>
+<body onload="Onload()" style="margin:0;height:100%;background:#b0b0b0">
+<div id="stage" class="abs" style="left:0;right:0;top:0;bottom:0;overflow:hidden">
+</div>
+<div id="guide" class="abs" style="left:0;width:30rem;top:0;bottom:0;background:#ddd;color:#000;box-shadow:0 0 .4rem #000;transform:rotateZ(90deg);transition:all .5s;-webkit-transform-origin:50% -13.5rem;transform-origin:50% -13.5rem;border-radius:0 .2rem .2rem 0">
+	<div class="txt3d" style="color:#555;text-align:center;font:normal 2rem/2rem Tahoma"><b t="CO-ACT">CO-ACT</b></div>
+	<div class="head" style="margin:.3rem .5rem 0 .5rem;font-size:1rem;line-height:1rem">
+		<a class="op fr" _act="logout"><i style="color:#f00">&#xe935;</i>退出</a>
+		<a class="op fr" _act="user" disp="{}.role<2?'':0"><i style="color:#8f0">&#xe9c0;</i>用户</a>
+		<a class="op fr" _act="grp" disp="{}.role<1?'':0"><i style="border-radius:50%;background:#0ff;width:1.2rem;height:1.2rem;line-height:1.3rem;margin:.4rem;color:#9a8">&#xe9f3;</i>团队</a>
+		<b class="bi" _act="set"><i data="<css>.background='url(/pic/head/'+{}.id+'.jpg) 0 0 / 100% 100%'" style="margin-left:-.4rem;width:2rem;height:2rem;border-radius:1rem">&nbsp;</i>个人设置</b>
+		<b data="{}.name.toHTML()">张三</b>
+	</div>
+	<div class="abs _Tree scrollY" style="top:5.5rem;bottom:.5rem;left:-.8rem;right:.5rem;font-size:1rem">
+	</div>
+	<div class="absfull" style="background:rgba(0,0,0,.5);display:none"></div>
+</div>
+<div id="boxWait" class='scene' style="background:rgba(51,153,221,0)"><img src="pic/loading.gif" style="position:absolute;top:50%;left:50%;width:110px;height:110px;margin:-55px 0 0 -55px;border-radius:32px;opacity:.8"></div>
+</body></html>
